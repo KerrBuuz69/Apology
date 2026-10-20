@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+<meta charset="UTF-8">
+<title>A Apology for my Love</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<script>document.documentElement.className += " js";</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Pirata+One&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --void: #0a0610;
+  --crypt: #140b1f;
+  --plum: #241437;
+  --amethyst: #7c4dcc;
+  --orchid: #c9a8f7;
+  --bone: #ece5f4;
+  --mist: #a99dbb;
+  --font-display: 'Pirata One', Georgia, serif;
+  --font-body: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-label: 'Cinzel', Georgia, 'Times New Roman', serif;
+}
+html { background: var(--void); }
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(124, 77, 204, 0.22), transparent 70%),
+    var(--void);
+  color: var(--bone);
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  padding-block: 3rem 6rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  min-height: 100%;
+  overflow-x: clip;
+}
+#embers { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.wrap { position: relative; z-index: 1; max-width: 40rem; margin-inline: auto; display: flex; flex-direction: column; gap: 3rem; }
+
+.label {
+  font-family: var(--font-label);
+  font-size: 0.78rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--orchid);
+  margin: 0;
+  text-align: center;
+}
+
+/* Hero: arched window */
+.hero { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.arch {
+  width: min(100%, 22rem);
+  box-sizing: border-box;
+  padding: 3.5rem 1.5rem 2.25rem;
+  border-radius: 11rem 11rem 0 0;
+  border: 1px solid var(--amethyst);
+  background: linear-gradient(180deg, var(--plum) 0%, var(--crypt) 55%, var(--void) 100%);
+  box-shadow: 0 0 0 6px var(--void), 0 0 0 7px rgba(124, 77, 204, 0.55), 0 0 90px rgba(124, 77, 204, 0.35);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.moon {
+  width: 3.4rem; height: 3.4rem; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #f4ecff, var(--orchid) 60%, #9a78d8);
+  box-shadow: 0 0 28px rgba(201, 168, 247, 0.65);
+  animation: flicker 6s ease-in-out infinite;
+}
+@keyframes flicker { 0%, 100% { box-shadow: 0 0 24px rgba(201, 168, 247, 0.55); } 50% { box-shadow: 0 0 40px rgba(201, 168, 247, 0.85); } }
+h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3.4rem, 16vw, 5rem);
+  line-height: 1;
+  margin: 0;
+  color: var(--bone);
+  text-shadow: 0 0 24px rgba(124, 77, 204, 0.7);
+  text-wrap: balance;
+}
+.hero-sub { margin: 0; font-style: italic; color: var(--mist); font-size: 1.15rem; text-wrap: balance; }
+
+/* Letter */
+.letter {
+  position: relative;
+  padding: 3.75rem clamp(1.25rem, 6vw, 3rem);
+  background: linear-gradient(180deg, var(--crypt), var(--void));
+  border: 1px solid rgba(124, 77, 204, 0.4);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+  --r: clamp(3.8rem, 16vw, 5.4rem);
+}
+.vine { position: absolute; z-index: 1; pointer-events: none; filter: drop-shadow(0 0 6px rgba(124, 77, 204, 0.5)); }
+.vine-top, .vine-bottom { left: 0; right: 0; height: 28px; background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%20-2%20120%2028'%20width='120'%20height='28'%3E%3Cpath%20d='M0%2012%20C20%202%2040%202%2060%2012%20S100%2022%20120%2012'%20fill='none'%20stroke='%234a2d82'%20stroke-width='1.6'/%3E%3Cpath%20d='M27%205.4%20L31%20-2%20L33%205.4Z'%20fill='%236a42b8'/%3E%3Cpath%20d='M87%2019.6%20L89%2026%20L93%2019.6Z'%20fill='%236a42b8'/%3E%3C/svg%3E"); background-repeat: repeat-x; background-size: 120px 28px; }
+.vine-top { top: -14px; }
+.vine-bottom { bottom: -14px; }
+.vine-left, .vine-right { top: 0; bottom: 0; width: 28px; background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='-2%200%2028%20120'%20width='28'%20height='120'%3E%3Cpath%20d='M12%200%20C2%2020%202%2040%2012%2060%20S22%20100%2012%20120'%20fill='none'%20stroke='%234a2d82'%20stroke-width='1.6'/%3E%3Cpath%20d='M5.4%2027%20L-2%2031%20L5.4%2033Z'%20fill='%236a42b8'/%3E%3Cpath%20d='M19.6%2087%20L26%2089%20L19.6%2093Z'%20fill='%236a42b8'/%3E%3C/svg%3E"); background-repeat: repeat-y; background-size: 28px 120px; }
+.vine-left { left: -14px; }
+.vine-right { right: -14px; }
+.rose { position: absolute; z-index: 3; pointer-events: none; width: var(--r); height: var(--r); filter: drop-shadow(0 0 9px rgba(124, 77, 204, 0.6)); }
+.rose-tl { top: calc(var(--r) * -0.4); left: calc(var(--r) * -0.22); transform: rotate(-14deg); }
+.rose-tr { top: calc(var(--r) * -0.32); right: calc(var(--r) * -0.18); width: calc(var(--r) * 0.8); height: calc(var(--r) * 0.8); transform: rotate(22deg); }
+.rose-bl { bottom: calc(var(--r) * -0.32); left: calc(var(--r) * -0.18); width: calc(var(--r) * 0.8); height: calc(var(--r) * 0.8); transform: rotate(160deg); }
+.rose-br { bottom: calc(var(--r) * -0.4); right: calc(var(--r) * -0.22); transform: rotate(196deg); }
+.petal { fill: #0b0612; stroke: #8e63e0; stroke-width: 1.3; stroke-linejoin: round; }
+.swirl { fill: none; stroke: #8e63e0; stroke-width: 1.2; stroke-linecap: round; }
+.vine-line { position: relative; height: 28px; background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%20-2%20120%2028'%20width='120'%20height='28'%3E%3Cpath%20d='M0%2012%20C20%202%2040%202%2060%2012%20S100%2022%20120%2012'%20fill='none'%20stroke='%234a2d82'%20stroke-width='1.6'/%3E%3Cpath%20d='M27%205.4%20L31%20-2%20L33%205.4Z'%20fill='%236a42b8'/%3E%3Cpath%20d='M87%2019.6%20L89%2026%20L93%2019.6Z'%20fill='%236a42b8'/%3E%3C/svg%3E"); background-repeat: repeat-x; background-size: 120px 28px; filter: drop-shadow(0 0 6px rgba(124, 77, 204, 0.5)); margin-block: 1rem; }
+.vine-line .rose { position: absolute; left: 50%; top: 50%; width: 3.4rem; height: 3.4rem; transform: translate(-50%, -50%); }
+.letter p { margin: 0 0 1.4rem; }
+.salutation { font-family: var(--font-display); font-size: 2rem; line-height: 1.1; color: var(--orchid); margin-bottom: 1.25rem !important; }
+.letter h2 {
+  font-family: var(--font-label);
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--orchid);
+  margin: 2.25rem 0 1rem;
+  display: flex; align-items: center; gap: 0.9rem;
+}
+.letter h2::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(124, 77, 204, 0.7), transparent); }
+.letter ul { list-style: none; margin: 0 0 1.4rem; padding: 0; display: flex; flex-direction: column; gap: 0.8rem; }
+.letter li { position: relative; padding-left: 1.7rem; }
+.letter li::before {
+  content: ""; position: absolute; left: 0.2rem; top: 0.68em; width: 0.5rem; height: 0.5rem;
+  background: var(--amethyst); transform: rotate(45deg); box-shadow: 0 0 10px rgba(124, 77, 204, 0.8);
+}
+.signoff { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
+.signoff p { margin: 0; font-style: italic; font-size: 1.4rem; color: var(--orchid); }
+
+/* Music player: Centered initially when .intro is active, moves to corner once played */
+.music {
+  position: fixed; z-index: 5;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.3rem;
+  opacity: 0.7;
+  background: rgba(20, 11, 31, 0.92);
+  border: 1px solid var(--amethyst);
+  border-radius: 999px;
+  box-shadow: 0 0 24px rgba(124, 77, 204, 0.4);
+  transition: all 1.2s cubic-bezier(0.22, 0.8, 0.2, 1);
+  cursor: pointer;
+}
+.music.intro {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: auto;
+  right: auto;
+  padding: 0.9rem 2rem 0.9rem 0.9rem;
+  opacity: 1;
+  animation: beckon 3s ease-in-out infinite;
+}
+@keyframes beckon { 0%, 100% { box-shadow: 0 0 24px rgba(124, 77, 204, 0.4); } 50% { box-shadow: 0 0 48px rgba(124, 77, 204, 0.85); } }
+.music:not(.intro) .music-label { display: none; }
+.music:hover, .music:focus-within { opacity: 1; }
+.music-btn {
+  width: 2.4rem; height: 2.4rem; flex: none; border-radius: 50%;
+  border: 1px solid var(--orchid); background: var(--plum); color: var(--bone);
+  cursor: pointer; display: grid; place-items: center; padding: 0;
+  transition: width 1s ease, height 1s ease, background 0.2s ease;
+}
+.music.intro .music-btn { width: 3.6rem; height: 3.6rem; }
+.music-btn:hover { background: var(--amethyst); }
+.music-btn svg { width: 1rem; height: 1rem; fill: currentColor; }
+.music-btn .ico-pause { display: none; }
+.music-btn[aria-pressed="true"] .ico-play { display: none; }
+.music-btn[aria-pressed="true"] .ico-pause { display: block; }
+.music-label { font-family: var(--font-label); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orchid); white-space: nowrap; }
+.music.intro .music-label { font-size: 1rem; }
+
+.js .gated { display: none; }
+.reveal { display: block !important; animation: rise 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+.letter { scroll-margin-top: 2rem; }
+
+.reply { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.reply h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 9vw, 2.8rem); line-height: 1.1; margin: 0; text-wrap: balance; }
+.foot { margin: 0; text-align: center; color: var(--mist); font-size: 0.72rem; }
+</style>
+
+<canvas id="embers" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="petal" class="petal" d="M50 52 C26 44 20 14 50 8 C80 14 74 44 50 52Z"/>
+    <symbol id="rose" viewBox="0 0 100 100">
+      <g>
+        <use href="#petal"/>
+        <use href="#petal" transform="rotate(72 50 50)"/>
+        <use href="#petal" transform="rotate(144 50 50)"/>
+        <use href="#petal" transform="rotate(216 50 50)"/>
+        <use href="#petal" transform="rotate(288 50 50)"/>
+        <use href="#petal" transform="rotate(36 50 50) translate(50 50) scale(0.74) translate(-50 -50)"/>
+        <use href="#petal" transform="rotate(108 50 50) translate(50 50) scale(0.74) translate(-50 -50)"/>
+        <use href="#petal" transform="rotate(180 50 50) translate(50 50) scale(0.74) translate(-50 -50)"/>
+        <use href="#petal" transform="rotate(252 50 50) translate(50 50) scale(0.74) translate(-50 -50)"/>
+        <use href="#petal" transform="rotate(324 50 50) translate(50 50) scale(0.74) translate(-50 -50)"/>
+        <use href="#petal" transform="translate(50 50) scale(0.46) translate(-50 -50)"/>
+        <use href="#petal" transform="rotate(120 50 50) translate(50 50) scale(0.46) translate(-50 -50)"/>
+        <use href="#petal" transform="rotate(240 50 50) translate(50 50) scale(0.46) translate(-50 -50)"/>
+        <path class="swirl" d="M50 45 C56 45 58 52 52 54 C46 56 43 49 47 45 C51 41 58 44 57 50"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="music intro" id="music">
+  <button class="music-btn" id="music-btn" type="button" aria-pressed="false" aria-label="Play music">
+    <svg class="ico-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg>
+    <svg class="ico-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h3.5v13H3zM9.5 1.5H13v13H9.5z"/></svg>
+  </button>
+  <span class="music-label" id="music-label">Play Song</span>
+</div>
+
+<!-- Direct audio element pointing to audio.mp3 in the same folder -->
+<audio id="bg-audio" src="audio.mp3" preload="auto" loop></audio>
+
+<main class="wrap">
+  <header class="hero">
+    <p class="label">A letter for my dear Love Enkhtungalag</p>
+    <div class="arch">
+      <div class="moon" aria-hidden="true"></div>
+      <h1>I'm sorry</h1>
+    </div>
+  </header>
+
+  <article class="letter gated">
+    <div class="vine vine-top" aria-hidden="true"></div>
+    <div class="vine vine-bottom" aria-hidden="true"></div>
+    <div class="vine vine-left" aria-hidden="true"></div>
+    <div class="vine vine-right" aria-hidden="true"></div>
+    <svg class="rose rose-tl" viewBox="0 0 100 100" aria-hidden="true"><use href="#rose"/></svg>
+    <svg class="rose rose-tr" viewBox="0 0 100 100" aria-hidden="true"><use href="#rose"/></svg>
+    <svg class="rose rose-bl" viewBox="0 0 100 100" aria-hidden="true"><use href="#rose"/></svg>
+    <svg class="rose rose-br" viewBox="0 0 100 100" aria-hidden="true"><use href="#rose"/></svg>
+    
+    <p class="salutation">Enkhtungalag, my love,</p>
+    <p>I am deeply sorry for repeating the same mistake, again and again.</p>
+    <p>I could have respected you and our relationship by being clear and honest with you. I wasn't. I was sassy instead.</p>
+
+    <p>I ignored you, even when you asked and checked on me, and I left you in quiet isolation.</p>
+    <p>I said sorry many times and still failed to change.</p>
+
+    <p>I know my words may feel worthless to you now. I understand it at last, and I am sorry once again. I should have loved you with respect, and instead I was careless and thoughtless.</p>
+
+    <p>We have spent two years together, and we built so much in that time. I am sorry for breaking it, and for losing your hope this much.</p>
+    <p>I cannot imagine my future without you. I want to spend my life with you, and even after death, only with you. Nobody is as understanding, kind, intelligent, hardworking and beautiful as you.</p>
+    <p>It hurts me deeply to know that I’ve hurt my sweet, lovely girl so much. Please don't let my mistake destroy everything we've built together. I promise with all my heart to respect our relationship, cherish you, and love you the way you truly deserve.</p>
+    <h2>My promise</h2>
+    <p>If you give me one last chance, I promise I will fix my attitude and never be like this again. I will respect our relationship and communicate you with love and care. I will not repeat this ignorance for the last time</p>
+    <p>My love, please forgive me.for the last time</p>
+
+    <div class="signoff">
+      <p>Love from your <br>Khangay</p>
+    </div>
+  </article>
+
+  <section class="reply gated" aria-labelledby="ask">
+    <h2 id="ask">Will you give me one last chance?</h2>
+  </section>
+
+  <div class="vine-line gated" aria-hidden="true"><svg class="rose" viewBox="0 0 100 100"><use href="#rose"/></svg></div>
+
+  <p class="foot label gated">Written under the same blue moon as you</p>
+</main>
+
+<script>
+  const music = document.getElementById('music');
+  const musicBtn = document.getElementById('music-btn');
+  const audio = document.getElementById('bg-audio');
+  
+  let isPlaying = false;
+
+  music.addEventListener('click', () => {
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.pause();
+      isPlaying = false;
+      musicBtn.setAttribute('aria-pressed', 'false');
+      musicBtn.setAttribute('aria-label', 'Play music');
+    } else {
+      audio.play().then(() => {
+        isPlaying = true;
+        musicBtn.setAttribute('aria-pressed', 'true');
+        musicBtn.setAttribute('aria-label', 'Pause music');
+        
+        // Slide to the corner and reveal letter content
+        music.classList.remove('intro');
+        document.querySelectorAll('.gated').forEach(el => el.classList.add('reveal'));
+      }).catch(err => {
+        console.error('Playback blocked or failed:', err);
+      });
+    }
+  });
+</script>
+</body>
+</html>
